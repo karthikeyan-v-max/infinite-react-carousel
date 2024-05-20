@@ -7,10 +7,10 @@ const Arrow = ({
   // currentSlide,
   clickHandler,
   // slideCount,
-  type,
-  prevArrow,
-  nextArrow,
-  arrowsBlock,
+  type = 'prev',
+  prevArrow = null,
+  nextArrow = null,
+  arrowsBlock = false ,
 }) => {
   const ClickHandler = (options, e) => {
     e.preventDefault();
@@ -79,7 +79,7 @@ const Arrow = ({
 };
 
 Arrow.propTypes = propTypes;
-Arrow.defaultProps = defaultProps;
+
 
 const PrevArrow = (props) => <Arrow type="prev" {...props} />;
 const NextArrow = (props) => <Arrow type="next" {...props} />;
